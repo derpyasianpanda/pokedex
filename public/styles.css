@@ -1,0 +1,183 @@
+/*
+  Name: KV Le
+  Date: 4/10/2020
+  Section: CSE 154 AN
+  This CSS sheet styles the main index.html page. It provides the user with
+  a more appealing interface while retrieving the Pokemon Data from the Pokedex.
+*/
+
+@keyframes slideout {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: 'VT323', monospace;
+  background-color: #5db9ff;
+  margin: 0;
+}
+
+header, body, form, figure, header section, #general, #gallery, #pokedex section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+header, body, figure, #general {
+  flex-direction: column;
+}
+
+header, input, p, summary, footer {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+main, section, aside p {
+  border-radius: 25px;
+}
+
+figure {
+  padding: 15px;
+}
+
+img {
+  width: 75%;
+}
+
+header img {
+  margin: 50px;
+  width: 1000px;
+}
+
+form {
+  font-size: 1.5rem;
+}
+
+form > *, details {
+  padding: 5px;
+}
+
+form > *, p {
+  margin: 10px;
+}
+
+details[open] p {
+  animation: slideout 0.25s ease-in-out;
+}
+
+aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+aside p {
+  padding: 10px 15px;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 5px;
+  border: 1px solid #356abc;
+  transition: transform ease-in-out 0.3s;
+  color: #356abc;
+}
+
+input::placeholder {
+  color: red;
+}
+
+input[type="button"], input[type="submit"], input[type="password"] {
+  background-color: #ffcc07;
+}
+
+input[type="text"]:valid, input[type="password"]:valid {
+  background-color: #ffcd00;
+}
+
+input[type="text"]:invalid, input[type="password"]:invalid {
+  border: 1px solid red;
+}
+
+input:disabled, input[type="text"]:invalid, input[type="password"]:invalid {
+  background-color: khaki;
+}
+
+input:enabled:hover, input[type="submit"]:enabled:hover {
+  transform: scale(1.1);
+  transition: transform ease-in-out 0.2s;
+}
+
+footer {
+  background-color: wheat;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+footer, #evolutions, #varieties, #forms {
+  width: 100%;
+}
+
+aside p, #general, #gallery, #evolutions, #varieties, #forms, #favorites {
+  background-color: white;
+}
+
+#general, #gallery, #evolutions, #varieties, #forms {
+  margin: 10px 30px;
+}
+
+#pokedex, #favorites {
+  width: 65%;
+}
+
+#pokedex {
+  padding: 85px;
+  margin: 25px;
+  background-color: #ff0000;
+}
+
+#gallery {
+  width: 300px;
+  height: 300px;
+}
+
+#general {
+  width: 400px;
+  padding: 10px;
+}
+
+#evolutions img, #forms img {
+  width: 150px;
+}
+
+#varieties img, #favorites img {
+  width: 100px;
+  height: 100px;
+}
+
+#evolutions figure,
+#forms figure,
+#varieties figure,
+#favorites figure,
+#evolutions figure:hover,
+#varieties figure:hover,
+#forms figure:hover,
+#favorites figure:hover {
+  transition: all ease-in-out 0.2s;
+}
+
+#evolutions figure:hover, #varieties figure:hover, #forms figure:hover, #favorites figure:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}

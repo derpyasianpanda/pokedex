@@ -1,0 +1,17 @@
+{
+  "name": "scuffed-pokedex",
+  "version": "0.0.1",
+  "description": "KV's Scuffed Pokedex. Made for CSE154",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "KV Le",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.4"
+  }
+}

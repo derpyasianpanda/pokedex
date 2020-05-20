@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+  Name: KV Le
+  Date: April 8, 2020
+  Section: CSE 154 AC
+  This is the main html page that displays the working Pokedex. A Pokedex is a
+  tool that displays information on various types of creatures found in the game
+  Pokemon.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scuffed Pokedex</title>
+  <!--
+    Favicon icon from https://apkpure.com/pokidex-the-real-life-pok%C3%A9dex/app.harshit.pokedex
+  -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+  <body>
+    <header>
+      <!-- Title Image from https://fontmeme.com/pokemon-font/-->
+      <img src="https://fontmeme.com/permalink/200502/b7465c0a0870c19da0a20a8b505f153f.png" alt="KV's Scuffed Pokedex">
+      <form id="pokeselector" autocomplete="off">
+        <label for="selector">Search for a Pokemon!</label>
+        <input type="text" id="selector" name="selector" placeholder="Pokemon Name or ID" required>
+        <input type="submit" value="Get Pokemon">
+        <input type="button" value="Random!">
+        <input type="button" value="Back">
+        <input type="button" value="Next">
+      </form>
+      <form id="account" autocomplete="off">
+        <label for="username">Login for Favorites!</label>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+        <input type="button" value="Toggle Favorites" disabled>
+      </form>
+      <h2>Currently Logged in:</h2>
+      <section id="favorites" class="hidden"></section>
+    </header>
+    <main id="pokedex">
+      <section>
+        <section id="gallery">
+          <img id="sprite" src="https://66.media.tumblr.com/c99a579db3ae0fc164bf4cca148885d3/tumblr_mjgv8kEuMg1s87n79o1_400.gif" alt="Running Pikachu">
+          <input class="hidden" type="button" value="Add to Favorites">
+        </section>
+        <section id="general">
+          <h2>Welcome to KV's Scuffed Pokedex</h2>
+        </section>
+      </section>
+      <section>
+        <section id="evolutions"></section>
+        <section id="forms"></section>
+        <section id="varieties"></section>
+      </section>
+    </main>
+    <aside></aside>
+    <footer>
+      <button>Toggle Music</button>
+      <p>
+        All data retrieved from the <a href="https://pokeapi.co/" target="_blank">PokeAPI</a>
+      </p>
+      <p>
+        Pokémon and Pokémon character names are trademarks of Nintendo
+      </p>
+      <details>
+        <summary>Usage Notes</summary>
+        <p>
+          The PokeAPI database doesn't have all the sprites :(
+        </p>
+        <p>
+          The images sometimes take a while to load and you cannot click on the evolutions
+          before they are all loaded.
+        </p>
+        <p>
+          Some newer pokemon and one-off special pokemon don't work because they
+          are not in the database or are too unique
+        </p>
+      </details>
+    </footer>
+  </body>
+</html>
